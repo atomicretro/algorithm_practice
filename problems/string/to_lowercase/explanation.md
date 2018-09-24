@@ -7,7 +7,7 @@ Instead, I built a dictionary where each uppercase English alphabet character wa
 ### Extension
 The method as it is currently written only works for the 26 English language alphabet characters. An easy extension would be to increase the range to cover non-English language characters, but this functionality lies outside my needs for the method. Alternatively, the method can be modified to intake an outside dictionary, which would allow it to be used with any character set and would decrease the amount of time it takes to run when called at the cost of coupling it to a outside data.
 
-### Complexity
+### Analysis
 Time Complexity: `O(n)`
 * Programmatically creating the dictionary every time the method is called slows the process down in absolute time, but as the dictionary is bound by the English alphabet and not the input string this has no effect on the time complexity of the algorithm. Instead, my solution is `O(n)` because it needs to step through each character in the input string to check whether it is lowercase or whether it needs to be run through the dictionary.
 
