@@ -1,21 +1,21 @@
 var removeNthFromEnd = function(head, n) {
-  let heldNode = head;
-  let currentNode = head;
-  for(let i = 0; i < n; i++) currentNode = currentNode.next
+  let slowNode = head;
+  let fastNode = head;
+  for(let i = 0; i < n; i++) fastNode = fastNode.next
 
-  if(currentNode === null) {
-    head = heldNode.next;
+  if(fastNode === null) {
+    head = slowNode.next;
     return head;
-  } else if(currentNode.next === null) {
-    heldNode.next = heldNode.next.next;
+  } else if(fastNode.next === null) {
+    slowNode.next = slowNode.next.next;
     return head;
   };
 
-  while(currentNode.next) {
-    heldNode = heldNode.next;
-    currentNode = currentNode.next;
-    if(currentNode.next === null) {
-      heldNode.next = heldNode.next.next;
+  while(fastNode.next) {
+    slowNode = slowNode.next;
+    fastNode = fastNode.next;
+    if(fastNode.next === null) {
+      slowNode.next = slowNode.next.next;
       return head;
     };
   };
