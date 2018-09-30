@@ -19,7 +19,7 @@ Explanation: The binary representation of 1 is 1 (no leading zero bits), and its
 
 ## Solution
 ### Ruby
-```
+```ruby
 def find_complement(num)
   flipped = ''
   num.to_s(2).each_char { |ch| ch == '0' ? flipped += '1' : flipped += '0'}

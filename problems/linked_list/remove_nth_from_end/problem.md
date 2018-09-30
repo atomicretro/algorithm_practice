@@ -13,7 +13,7 @@ Note: given `n` will always be valid.
 
 ## Solution
 ### JavaScript
-```
+```javascript
 var removeNthFromEnd = function(head, n) {
   let slowNode = head;
   let fastNode = head;

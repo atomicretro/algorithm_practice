@@ -16,7 +16,7 @@ Output: "here"
 
 ## Solution
 ### Ruby
-```
+```ruby
 def to_lowercase(str)
   converter = create_converter
 

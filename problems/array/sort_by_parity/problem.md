@@ -12,7 +12,7 @@ Output: [2,4,3,1] OR [4,2,3,1] OR [2,4,1,3] OR [4,2,1,3]
 
 ## Solution
 ### Ruby
-```
+```ruby
 def sort_array_by_parity(arr)
   sorted = []
   arr.each { |n| n % 2 == 0 ? sorted.unshift(n) : sorted.push(n) }

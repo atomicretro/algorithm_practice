@@ -16,7 +16,7 @@ All letters in `str` and `char` are lowercase.
 
 ## Solution
 ### JavaScript
-```
+```javascript
 var shortestToChar = function(str, char) {
   let charIndices = [];
   for(let i = 0; i < str.length; i++) {
