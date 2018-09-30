@@ -1,4 +1,4 @@
-var removeNthFromEnd = function(head, n) {
+const removeNthFromEnd = function(head, n) {
   let slowNode = head;
   let fastNode = head;
   for(let i = 0; i < n; i++) fastNode = fastNode.next

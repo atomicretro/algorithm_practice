@@ -1,4 +1,4 @@
-var shortestToChar = function(str, char) {
+const shortestToChar = function(str, char) {
   let charIndices = [];
   for(let i = 0; i < str.length; i++) {
     if(str[i] === char) charIndices.push(i);
