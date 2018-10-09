@@ -1,4 +1,4 @@
-# Prime Number of Set Bits in Binary Representation
+# Is Monotonic Array?
 ## Problem
 An array is _monotonic_ if it is either monotone increasing or monotone decreasing.
 
