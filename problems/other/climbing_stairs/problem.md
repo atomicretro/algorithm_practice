@@ -40,13 +40,23 @@ const climbStairs = function(n) {
 };
 ```
 
-## Explanation
+### Ruby
+```ruby
+def climb_stairs(n)
+  return 1 if n == 1
+  fib = [1,2]
+  fib.push(fib[-2] + fib[-1]) while fib.length < n
+  fib.last
+end
+```
+
+## Explanation (JavaScript)
 ### Reasoning
 I diagrammed this problem out by hand up to an input of `6` and realized that the solutions were forming the Fibonacci Sequence (see diagram below). Once I realized that, solving for an input of `n` simply became solving for the `nth` Fibonacci number.
 
 ![diagram showing how the solutions to incrementing inputs forms the Fibonacci Sequence](./stairs_diagram.png)
 
-### Analysis
+### Analysis (JavaScript)
 Time Complexity: `O(n)`
 * Solving for input `n` requires finding the `nth` Fibonacci number, which will require `n` iterations through the accumulating loop. This gives us a time complexity of `O(n)`.
 
