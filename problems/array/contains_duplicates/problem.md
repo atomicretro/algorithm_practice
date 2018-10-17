@@ -28,11 +28,23 @@ const containsDuplicates = function(nums) {
 };
 ```
 
+### Ruby
+```ruby
+def contains_duplicates(nums)
+  uniques = {}
+  nums.each do |n|
+    return true if uniques[n]
+    uniques[n] = true
+  end
+  false
+end
+```
+
 ## Explanation
-### Reasoning
+### Reasoning (JavaScript)
 To easily check for duplicates in the input array I create a "seen" hash to keep track of every element from the array that I've seen. I do this by stepping through the array, adding an element to the hash (by setting a key of the element to the value `true`). At the same time, I check if the current element is already in the hash. If it is, that means there are at least two copies of the element in the array, which means the array contains at least one duplicate value, so I immediately return `true`. If I can step through the array without ever encountering a duplicate element, I return `false`.
 
-### Analysis
+### Analysis (JavaScript)
 Time Complexity: `O(n)`
 * If there are no duplicate elements in the input array, this algorithm will step through every element of that array, which takes `n` time.
 
